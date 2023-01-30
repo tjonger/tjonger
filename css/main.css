@@ -268,7 +268,7 @@ body > footer .copyrights {
   border-radius: 100px;
   text-align: center;
   color: #fff;
-  font-size: 28px;
+  font-size: 1.5rem;
   font-weight: 800;
   margin-right: 8px;
   margin-top: 4px;
@@ -299,24 +299,31 @@ body > footer .copyrights {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' stroke='10' fill='rgba%284, 202, 149, 0.25%29'/%3e%3c/svg%3e")
 }
 
+.mode-switch .form-switch .form-check-input:active {
+  filter: none;
+}
+
 .mode-switch .form-switch .form-check-input:before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f185";
-  font-size: 1rem;
-  display: inline-block;
+  content: "\263C";
+  font-size: 29px;
   color: #54CA95;
+
+  display: inline-block;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  margin-left: 11px;
-  transition: margin-left .15s ease-in-out;
+
+  margin-left: 10px;
   margin-top: 2px;
+  transition: margin-left .15s ease-in-out;
 }
 
 .mode-switch .form-switch .form-check-input:checked:before {
-  margin-left: 46px;
+  margin-left: 45px;
+  font-size: 18px;
   color: #fff;
+  font-family: "Font Awesome 6 Free";
   content: "\f186";
 }
 
@@ -372,18 +379,8 @@ body > footer .copyrights {
   display: block;
   position: absolute;
   content: '';
-  width: 30px;
-  background-color: #54CA95;
-  height: 2px;
-  bottom: 0;
-}
-
-.block-title h2:before {
-  display: block;
-  position: absolute;
-  content: '';
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #54CA95;
   height: 2px;
   bottom: 0;
 }
@@ -916,7 +913,7 @@ ul.social-links li:last-child a {
     width: 32px;
     height: 32px;
     line-height: 32px;
-    font-size: 18px;
+    font-size: 1rem;
     margin-top: 0;
   }
 
