@@ -8,11 +8,11 @@
     <meta name="description" content="Daniël Hansen | Resume">
     <meta name="author" content="Daniël Hansen" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#54ca95" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#54ca95" />
     <meta name="msapplication-TileColor" content="#54CA95" />
     <meta name="theme-color" content="#54CA95">
 
@@ -27,8 +27,11 @@
     <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
 
-<body class="page">
-    <div id="page" class="page-container">
+<body id="page" class="page">
+
+    <div class="scroll-to-top disabled"><i class="fa-solid fa-chevron-up"></i></div>
+
+    <div class="page-container">
 
         <header class="header">
             <div class="header-content clearfix">
@@ -38,8 +41,10 @@
                         <div class="logo-text">Daniël <span>Hansen</span></div>
                     </a>
                 </div>
-                <div class="mode-switch">
-                    <div class="form-check form-switch form-switch-xl">
+                <div class="mode-switch clearfix">
+                    <div class="mode-switch-system"></div>
+
+                    <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" role="switch" id="mode-switch">
                         <label class="form-check-label" for="mode-switch"></label>
                     </div>
@@ -87,42 +92,42 @@
 
                                 <div class="timeline clearfix">
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period current">2022 - 2023</h5>
+                                        <h5 class="item-period current">January 2022 - March 2023</h5>
                                         <span class="item-company">Lightbase, Utrecht</span>
                                         <h4 class="item-title">Tech Lead</h4>
                                         <p>As a Tech Lead at Lightbase, I am responsible for leading the technical aspect of the project. This includes setting the technical direction, translating business problems into technical requirements and defining the technical scope of the solution based on the runtime, external services and wishes of the client. At the same time, I will provide technical guidance and support to the team members during development phase.</p>
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period ">2019 - 2023</h5>
+                                        <h5 class="item-period ">September 2019 - March 2023</h5>
                                         <span class="item-company">Lightbase, Utrecht</span>
                                         <h4 class="item-title">Backend Developer (node)</h4>
                                         <p>As a Backend Developer at Lightbase, I am responsible for the development and maintenance of the server-side applications. This includes designing and implementing APIs to allow communication between the frontend and the backend, as well as integrating the backend with third-party services. In this role, I also play a key role in the development of server-side logic and ensure that the backend of the application is scalable and secure. Additionally, I am always seeking ways to optimize the backend to improve the overall performance and user experience of the application. This is mostly done through collaboration with Team Core, which is focused on standardization and documentation.</p>
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period ">2018 - 2020</h5>
+                                        <h5 class="item-period ">November 2018 - October 2020</h5>
                                         <span class="item-company">Exit 0, Utrecht</span>
                                         <h4 class="item-title">Owner & Developer</h4>
                                         <p>I owned a company for 2 years that I primarily used for hosting and completing freelance projects with companies. This was largely due to the administrative requirements of these companies.</p>
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period ">2018 - 2019</h5>
+                                        <h5 class="item-period ">March 2018 - March 2019</h5>
                                         <span class="item-company">Enof creatieve communicatie, Utrecht</span>
                                         <h4 class="item-title">Full Stack Developer (PHP) & Lead Developer</h4>
                                         <p>At Enof, I was primarily responsible for developing and maintaining client projects, as well as supporting the development team and managing the internal tools used by the team.</p>
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period ">2017 - 2018</h5>
+                                        <h5 class="item-period ">March 2017 - March 2018</h5>
                                         <span class="item-company">TransIP, Leiden</span>
                                         <h4 class="item-title">Chief Coder (PHP)</h4>
                                         <p>At TransIP, I was responsible for the development and maintenance of both internal systems and customer-facing interfaces, such as the control panel and the transip.nl website.</p>
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period ">2014 - 2017</h5>
+                                        <h5 class="item-period ">February 2015 - June 2017</h5>
                                         <span class="item-company">Westsite Media, Utrecht</span>
                                         <h4 class="item-title">Full Stack Developer (PHP)</h4>
                                         <p>At Westsite Media, I was responsible for the development and maintenance of client projects.</p>
@@ -137,28 +142,28 @@
 
                                 <div class="timeline clearfix">
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period">2017</h5>
+                                        <h5 class="item-period">February 2018 - August 2018</h5>
                                         <span class="item-company">University of Amsterdam</span>
                                         <h4 class="item-title">M.Sc. in Software Engineering (not finished)</h4>
                                         <p>I had already learned how to code and gained the necessary theoretical and practical experience over the years. However, I wanted to take my skills as a software engineer to the next level and learn what is going on some abstractions deeper. I took a look at compiler theory and wanted to find out how I could apply this in my daily job as a programmer.</p>
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period">2016</h5>
+                                        <h5 class="item-period">February 2016 - July 2016</h5>
                                         <span class="item-company">University of Amsterdam</span>
                                         <h4 class="item-title">Minor Programming</h4>
                                         <p>As part of my Bachelor of Science degree, I was required to complete a minor program. Knowing that I wanted to apply for an M.Sc. in Software Engineering next, I wanted to follow an academic program at that university. During the minor, we had to create a Python program that implemented a multidimensional heuristics-based shortest path algorithm. This program represented a multi-layer silicon chip with many gates, but without the traces between them.</p>
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period">2013 - 2017</h5>
+                                        <h5 class="item-period">September 2013 - June 2017</h5>
                                         <span class="item-company">University of Applied Sciences Amsterdam (HvA)</span>
                                         <h4 class="item-title">BASc in Software Engineering</h4>
                                         <p>Doing what I like most: coding. This bachelor taught me to base my coding on theory rather than just trial and error (self-taught).</p>
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period">2008 - 2013</h5>
+                                        <h5 class="item-period">September 2008 - June 2013</h5>
                                         <span class="item-company">Leidsche Rijn College (LRC), Utrecht</span>
                                         <h4 class="item-title">Senior general secondary education (HAVO)</h4>
                                         <p>With as subject: Science and technology (Natuur & Techniek).</p>
@@ -207,7 +212,6 @@
                                 </div>
 
                                 <p>In my spare time, I enjoy working on (hobby) projects. These projects allow me to explore new technologies and programming languages. I find that these projects not only help me to learn and grow as a software engineer, but also provide me with a sense of accomplishment and satisfaction. Some of the projects I have worked on will be listed below.</p>
-
                             </div>
                          </div>
 
@@ -249,12 +253,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-      document.getElementById("year").innerHTML = new Date().getFullYear();
+      const body = document.querySelector("body");
+      const pageContainer = document.querySelector(".page-container");
 
-      const mode_switch = document.querySelector("#mode-switch");
-      mode_switch.addEventListener('change', function() {
+      const modeSwitch = document.querySelector("#mode-switch");
+      modeSwitch.addEventListener('change', function() {
         document.querySelector("#page").classList.toggle("dark-mode")
       });
+
+      const scrollToTop = document.querySelector(".scroll-to-top");
+      scrollToTop.addEventListener("click", function() {
+        body.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      body.addEventListener('scroll', function() {
+        if(body.scrollTop > 150) {
+          scrollToTop.classList.remove("disabled")
+        } else {
+          scrollToTop.classList.add("disabled")
+        }
+
+        if((body.scrollTop + window.innerHeight + 50) > pageContainer.offsetHeight) {
+          const footerHeight = document.querySelector("footer").getClientRects()[0].height;
+          scrollToTop.style.bottom = `${Math.floor(footerHeight + 10)}px`
+        } else {
+          scrollToTop.style.bottom = '10px';
+        }
+      });
+
+      document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
 </body>
 </html>
