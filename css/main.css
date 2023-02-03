@@ -461,6 +461,19 @@ body > footer .copyrights {
   display: inline-block;
 }
 
+.home-text .carousel .carousel-inner .carousel-item {
+  transition: opacity .6s ease-in-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.home-text .carousel .carousel-inner .carousel-item {
+  opacity: 0;
+}
+.home-text .carousel .carousel-inner .carousel-item.active {
+  opacity: 1;
+}
+
 @keyframes wave-animation {
   0% {
     transform: rotate( 0.0deg);
@@ -1138,6 +1151,10 @@ ul.social-links li:last-child a {
   -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,.8);
   -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,.8);
   box-shadow: 0px 0px 25px 0px rgba(0,0,0,.8);
+}
+
+.dark-mode .home-photo .hp-inner {
+  background-image: url('../images/pofile_dark.png');
 }
 
 .dark-mode .block-title h2:before, h3.comment-reply-title:before {
