@@ -1,6 +1,6 @@
 "use strict";
 
-(function(){
+(function () {
   const body = document.querySelector("body");
   const pageContainer = document.querySelector(".page-container");
 
@@ -23,19 +23,21 @@
 
     if ((body.scrollTop + window.innerHeight + 50) > pageContainer.offsetHeight) {
       const footerHeight = document.querySelector("footer").getClientRects()[0].height;
-      scrollToTop.style.bottom = `${Math.floor(footerHeight + 10)}px`
+      scrollToTop.style.bottom = `${Math.floor(footerHeight + 15)}px`
     } else {
-      scrollToTop.style.bottom = '10px';
+      scrollToTop.style.bottom = '15px';
     }
   });
 
-  document.getElementById("year").innerHTML = new Date().getFullYear();
+  document.querySelectorAll("#intro a").forEach(item =>
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
 
-  new bootstrap.Carousel(document.querySelector(".carousel"), {
-    interval: 4000,
-    keyboard: false,
-    touch: false,
-    hover: false,
-    ride: "carousel"
-  });
+      const offset = window.innerWidth < 1000 ? -30 : 70;
+      const target = document.querySelector(`a${event.target.attributes.href.value}`);
+      body.scrollTo({top: target.offsetTop + offset, behavior: 'smooth'});
+    })
+  )
+
+  document.getElementById("year").innerHTML = new Date().getFullYear();
 })();
