@@ -25,7 +25,17 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LG4NSRBGYQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LG4NSRBGYQ');
+    </script>
 </head>
 
 <body id="page" class="page">
@@ -35,6 +45,53 @@
     <div class="page-container">
 
         <header class="header">
+            <div class="print-content">
+                <div class="home-photo">
+                    <img class="hp-inner" src="images/profile.png" alt="Hi!">
+                </div>
+
+                <h1>Daniël <span>Hansen</span></h1>
+
+                <div>
+                    <p>
+                        <i aria-hidden="true" class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/dani%C3%ABl-hansen/" target="_blank">linkedin.com/in/daniël-hansen</a>
+                        <i aria-hidden="true" class="fab fa-github"></i> <a href="https://github.com/tjonger" target="_blank">github.com/tjonger</a>
+                        <i aria-hidden="true" class="fa fa-envelope"></i> <a href="mailto:hi@danielhansen.nl">hi@danielhansen.nl</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-birthday-cake" aria-hidden="true"></i> 12 November 1994
+                        <a href="tel:+31610630835">
+                            <i class="fa fa-phone" aria-hidden="true"></i> +31610630835
+                        </a>
+                        <a href="https://www.google.com/maps/place/Utrecht/" target="_blank">
+                            <i class="fa fa-location-arrow" aria-hidden="true"></i> Utrecht, The Netherlands
+                        </a>
+                    </p>
+                </div>
+
+            <div class="intro">
+
+                <div class="block-title">
+                    <h2>About me</h2>
+                </div>
+
+                <div>
+                    <p>I am a software engineer with 8 years of experience in developing and
+                        delivering software solutions. My passion lies in creating high-quality
+                        software that is both functional and maintainable.
+
+                        Throughout my career,
+                        I have had the opportunity to work in a variety of environments,
+                        including large corporations and small startup companies.</p>
+
+                    <p>On this page, you'll find a selection of projects that showcase my
+                        abilities and the various roles I've held throughout my career. Thank
+                        you for visiting my website, and I look forward to connecting with
+                        you.</p>
+                </div>
+            </div>
+            </div>
+
             <div class="header-content clearfix">
                 <div class="text-logo">
                     <a href="https://danielhansen.nl">
@@ -63,15 +120,15 @@
                                 <div class="home-content">
                                     <div class="row flex-v-align">
 
-                                        <div class="col-sm-12 col-md-5 col-lg-5">
+                                        <div class="col-sm-12 col-md-5 col-lg-5 print">
                                             <div class="home-photo">
-                                                <div class="hp-inner"></div>
+                                                <img class="hp-inner" src="images/profile.png" alt="Hi!" />
                                             </div>
                                         </div>
 
                                         <div class="col-sm-12 col-md-7 col-lg-7">
                                             <div class="home-text hp-left">
-                                                <div class="carousel slide">
+                                                <div class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"  data-bs-keyboard="false" data-bs-touch="false" data-bs-hover="false" data-bs-pause="false">
                                                     <div class="carousel-inner">
                                                         <div class="item carousel-item active">
                                                             <h4>Backend Developer</h4>
@@ -86,15 +143,20 @@
                                                 </div>
 
                                                 <h1>Hi, I'm Daniël <span class="wave">👋🏻</span></h1>
-                                                <p>I am a software engineer with 8 years of experience in developing and
-                                                    delivering software solutions. My passion lies in creating high-quality
-                                                    software that is both functional and maintainable. Throughout my career,
-                                                    I have had the opportunity to work in a variety of environments,
-                                                    including large corporations and small startup companies.</p>
-                                                <p>On this page, you'll find a selection of projects that showcase my
-                                                    abilities and the various roles I've held throughout my career. Thank
-                                                    you for visiting my website, and I look forward to connecting with
-                                                    you.</p>
+                                                <div class="intro">
+                                                    <p>I am a software engineer with 8 years of experience in developing and
+                                                        delivering software solutions. My passion lies in creating high-quality
+                                                        software that is both functional and maintainable.
+
+                                                        Throughout my career,
+                                                        I have had the opportunity to work in a variety of environments,
+                                                        including large corporations and small startup companies.</p>
+
+                                                    <p>On this page, you'll find a selection of projects that showcase my
+                                                        abilities and the various roles I've held throughout my career. Thank
+                                                        you for visiting my website, and I look forward to connecting with
+                                                        you.</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -103,14 +165,16 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-xs-12 col-sm-6">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="p-40"></div>
+
                                 <div class="block-title">
                                     <h2>Experience</h2>
                                 </div>
 
                                 <div class="timeline clearfix">
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period current">January 2022 - March 2023</h5>
+                                        <h5 class="item-period">January 2022 - March 2023</h5>
                                         <span class="item-company">Lightbase, Utrecht</span>
                                         <h4 class="item-title">Tech Lead</h4>
                                         <p>As a Tech Lead at Lightbase, I am responsible for leading the technical aspect of
@@ -122,9 +186,9 @@
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period ">September 2019 - March 2023</h5>
+                                        <h5 class="item-period">September 2019 - March 2023</h5>
                                         <span class="item-company">Lightbase, Utrecht</span>
-                                        <h4 class="item-title">Backend Developer (node)</h4>
+                                        <h4 class="item-title">Backend Developer (NodeJS)</h4>
                                         <p>As a Backend Developer at Lightbase, I am responsible for the development and
                                             maintenance of the server-side applications. This includes designing and
                                             implementing APIs to allow communication between the frontend and the backend,
@@ -137,7 +201,7 @@
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period ">November 2018 - October 2020</h5>
+                                        <h5 class="item-period">November 2018 - October 2020</h5>
                                         <span class="item-company">Exit 0, Utrecht</span>
                                         <h4 class="item-title">Owner & Developer</h4>
                                         <p>I owned a company for 2 years that I primarily used for hosting and completing
@@ -146,16 +210,16 @@
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period ">March 2018 - March 2019</h5>
+                                        <h5 class="item-period">March 2018 - March 2019</h5>
                                         <span class="item-company">Enof creatieve communicatie, Utrecht</span>
-                                        <h4 class="item-title">Full Stack Developer (PHP) & Lead Developer</h4>
+                                        <h4 class="item-title">Full Stack Developer (PHP) & Lead</h4>
                                         <p>At Enof, I was primarily responsible for developing and maintaining client
                                             projects, as well as supporting the development team and managing the internal
                                             tools used by the team.</p>
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period ">March 2017 - March 2018</h5>
+                                        <h5 class="item-period">February 2017 - March 2018</h5>
                                         <span class="item-company">TransIP, Leiden</span>
                                         <h4 class="item-title">Chief Coder (PHP)</h4>
                                         <p>At TransIP, I was responsible for the development and maintenance of both
@@ -164,7 +228,7 @@
                                     </div>
 
                                     <div class="timeline-item clearfix">
-                                        <h5 class="item-period ">February 2015 - June 2017</h5>
+                                        <h5 class="item-period">March 2014 - February 2017</h5>
                                         <span class="item-company">Westsite Media, Utrecht</span>
                                         <h4 class="item-title">Full Stack Developer (PHP)</h4>
                                         <p>At Westsite Media, I was responsible for the development and maintenance of
@@ -173,7 +237,9 @@
                                 </div>
                             </div>
 
-                            <div class="col-xs-12 col-sm-6">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="p-40"></div>
+
                                 <div class="block-title">
                                     <h2>Education</h2>
                                 </div>
@@ -217,6 +283,104 @@
                                         <p>With as subject: Science and technology (Natuur & Techniek).</p>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="page-new"></div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="p-40"></div>
+
+                                <div class="block-title">
+                                    <h2>Passions</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="info-block-w-icon">
+                                    <div class="ci-icon">
+                                        <i class="fa-solid fa-champagne-glasses"></i>
+                                    </div>
+
+                                    <div class="ci-text">
+                                        <h4>Fine Dining</h4>
+                                        <p>I have a deep appreciation for fine dining, as it allows me to try exceptional culinary creations and enjoy the service and ambiance that elevate dining to a memorable experience.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="info-block-w-icon">
+                                    <div class="ci-icon">
+                                        <i class="fa-solid fa-wand-sparkles"></i>
+                                    </div>
+
+                                    <div class="ci-text">
+                                        <h4>DIY Home automation</h4>
+                                        <p>I'm also enthusiastic about DIY home automation projects, where I leverage my skills in coding to create all sorts of solutions with the help of Home Assistant.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="info-block-w-icon">
+                                    <div class="ci-icon">
+                                        <i class="fa-solid fa-shrimp"></i>
+                                    </div>
+
+                                    <div class="ci-text">
+                                        <h4>Cooking</h4>
+                                        <p>One of my passion lies in the art of cooking. You can often find me in the kitchen, experimenting with new recipes and savoring the joy of cooking.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="info-block-w-icon">
+                                    <div class="ci-icon">
+                                        <i class="fa-solid fa-person-running"></i>
+                                    </div>
+
+                                    <div class="ci-text">
+                                        <h4>Running</h4>
+                                        <p>In my free time, I enjoy the running, which not only keeps me physically fit but also provides a sense of clarity and mental refreshment.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="info-block-w-icon">
+                                    <div class="ci-icon">
+                                        <i class="fa-solid fa-caravan"></i>
+                                    </div>
+
+                                    <div class="ci-text">
+                                        <h4>Traveling</h4>
+                                        <p>Exploring new cultures, cuisines, and landscapes is a true passion of mine, and I eagerly seize any opportunity to do so!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="info-block-w-icon">
+                                    <div class="ci-icon">
+                                        <i class="fa-solid fa-icons"></i>
+                                    </div>
+
+                                    <div class="ci-text">
+                                        <h4>Festivals</h4>
+                                        <p>In my spare time, I enjoy attending festivals as they offer a fantastic opportunity to be with good friends and exceptional music.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row skills">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="p-40"></div>
 
                                 <div class="block-title">
                                     <h2>Skills</h2>
@@ -227,9 +391,10 @@
                                     <li>PHP</li>
                                     <li>Java</li>
                                     <li>Python</li>
-                                    <li>Node</li>
-                                    <li>Shell</li>
-                                    <li>Linux, GNU</li>
+                                    <li>NodeJS</li>
+                                    <li>Shell (Fish)</li>
+                                    <li>Linux</li>
+                                    <li>GNU</li>
                                     <li>Time Management</li>
                                     <li>Communication</li>
                                     <li>Problem-Solving</li>
@@ -238,32 +403,6 @@
                                     <li>Agile</li>
                                     <li>Scrum</li>
                                 </ul>
-
-                                <div class="p-40"></div>
-                                <div class="block-title">
-                                    <h2>Interests</h2>
-                                </div>
-
-                                <ul class="list-items">
-                                    <li><i class="fa-solid fa-champagne-glasses"></i> Fancy dining</li>
-                                    <li><i class="fa-solid fa-wand-sparkles"></i> DIY Home automation</li>
-                                    <li><i class="fa-solid fa-shrimp"></i> Cooking</li>
-                                    <li><i class="fa-solid fa-person-running"></i> Running</li>
-                                    <li><i class="fa-solid fa-microchip"></i> Graphics programming</li>
-                                    <li><i class="fa-solid fa-caravan"></i> Travelling</li>
-                                    <li><i class="fa-solid fa-icons"></i> Festivals</li>
-                                </ul>
-
-                                <div class="p-40"></div>
-                                <div class="block-title">
-                                    <h2>Projects</h2>
-                                </div>
-
-                                <p>In my spare time, I enjoy working on (hobby) projects. These projects allow me to explore
-                                    new technologies and programming languages. I find that these projects not only help me
-                                    to learn and grow as a software engineer, but also provide me with a sense of
-                                    accomplishment and satisfaction. Some of the projects I have worked on will be listed
-                                    below.</p>
                             </div>
                         </div>
 
@@ -294,6 +433,11 @@
                             <i class="fa fa-location-arrow"></i> Utrecht, The Netherlands
                         </a>
                     </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-birthday-cake"></i> 12 November 1994
+                        </a>
+                    </li>
                 </ul>
             </div>
 
@@ -313,6 +457,15 @@
             crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 
+    <script type="text/javascript">
+        window._mfq = window._mfq || [];
+        (function() {
+          var mf = document.createElement("script");
+          mf.type = "text/javascript"; mf.defer = true;
+          mf.src = "//cdn.mouseflow.com/projects/47c9e002-b2cf-46ee-bd00-ae0e71c20395.js";
+          document.getElementsByTagName("head")[0].appendChild(mf);
+        })();
+    </script>
     <script type="text/javascript">
       console.log(`%c
                                           ,,|,?y,

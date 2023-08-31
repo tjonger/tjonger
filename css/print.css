@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i');
+
+@page {
+    size: A4;
+    margin: 0;
+
+    @top-center {
+        content: element(PrintHeader);
+    }
+}
+
+header .print-content {
+	position: running(PrintHeader);
+    text-align: center;
+    color: #000;
+}
+
+html {
+    background-color: #fff;
+}
+
+body {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #000;
+    width: 8.25in;
+    margin: 0 0 0 0;
+}
+
+a {
+    page-break-inside: avoid;
+    color: #000;
+    text-decoration: none;
+}
+
+h2 {
+    color: #54CA95;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+.col-md-6 {
+    width: 100%;
+}
+
+.col-sm-6 {
+    width: 50%;
+}
+
+.scroll-to-top,
+.header-content,
+.home-content,
+.site-footer,
+.skills {
+    display: none;
+}
+
+.print-content a {
+    margin: 0 8px 0 8px;
+}
+
+.print-content .intro {
+    text-align: left;
+}
+
+.page-container {
+    padding: 16px;
+}
+
+.home-photo {
+    display: block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 1000px;
+    border: 8px solid #fff;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,.1);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,.1);
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,.1);
+    margin-bottom: 16px;
+    -webkit-print-color-adjust:exact;
+    -webkit-filter:opacity(1);
+}
+
+.home-photo .hp-inner {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.block-title h2 {
+    color: #000;
+    font-size: 21px;
+    text-decoration: none;
+}
+
+.block-title h2:after {
+    display: block;
+    content: " ";
+    border: 1px solid #54CA95;
+    width: 100%;
+}
+
+.info-block-w-icon {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    display: table;
+    margin: 0;
+    padding: 0 10px 30px 0;
+}
+
+.info-block-w-icon .ci-icon {
+    position: relative;
+    display: table-cell;
+    padding-top: 7px;
+}
+
+.info-block-w-icon .ci-icon i {
+    position: relative;
+    display: table-cell;
+    color: #54CA95;
+    font-size: 1rem;
+}
+
+.info-block-w-icon .ci-text {
+    position: relative;
+    display: table-cell;
+    padding: 0 0 0 15px;
+    vertical-align: middle;
+}
+
+.info-block-w-icon .ci-text h4 {
+    margin: 7px 0;
+    font-size: 1rem;
+}
+
+.info-block-w-icon .ci-text p {
+    font-size: .92em;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 1rem 1rem 1rem 2rem;
+    break-inside: avoid;
+}
+
+.timeline-item:before {
+    display:inline-block;
+    content: "";
+    border: 2px solid #54CA95;
+    border-radius: 9px;
+    padding: 6px;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    z-index: 9;
+}
+
+.timeline-item:after {
+    display:inline-block;
+    content: "";
+    border-left: 1px solid #eee;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 7.5px;
+    z-index: 3;
+}
+
+.timeline-item .item-period {
+    font-size: 12px;
+    display: inline-block;
+}
+
+.timeline-item .item-company {
+    font-size: 12px;
+    float: right;
+}
+
+.timeline-item .item-title {
+    font-size: 16px;
+}
+
+.page-new {
+    break-before: page;
+}

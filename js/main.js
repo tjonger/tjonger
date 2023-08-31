@@ -1,41 +1,45 @@
 "use strict";
 
-(function(){
-  const body = document.querySelector("body");
-  const pageContainer = document.querySelector(".page-container");
+function darkMode() {
+  document
+    .querySelector("#mode-switch")
+    .addEventListener("change", function () {
+      document.querySelector("#page").classList.toggle("dark-mode");
+    });
+}
 
-  const modeSwitch = document.querySelector("#mode-switch");
-  modeSwitch.addEventListener('change', function () {
-    document.querySelector("#page").classList.toggle("dark-mode")
-  });
-
+function scrollToTop() {
   const scrollToTop = document.querySelector(".scroll-to-top");
   scrollToTop.addEventListener("click", function () {
-    body.scrollTo({top: 0, behavior: 'smooth'});
+    body.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  body.addEventListener('scroll', function () {
+  const body = document.querySelector("body");
+  const pageContainer = document.querySelector(".page-container");
+  body.addEventListener("scroll", function () {
     if (body.scrollTop > 150) {
-      scrollToTop.classList.remove("disabled")
+      scrollToTop.classList.remove("disabled");
     } else {
-      scrollToTop.classList.add("disabled")
+      scrollToTop.classList.add("disabled");
     }
 
-    if ((body.scrollTop + window.innerHeight + 50) > pageContainer.offsetHeight) {
-      const footerHeight = document.querySelector("footer").getClientRects()[0].height;
-      scrollToTop.style.bottom = `${Math.floor(footerHeight + 10)}px`
+    if (body.scrollTop + window.innerHeight + 50 > pageContainer.offsetHeight) {
+      const footerHeight = document
+        .querySelector("footer")
+        .getClientRects()[0].height;
+      scrollToTop.style.bottom = `${Math.floor(footerHeight + 15)}px`;
     } else {
-      scrollToTop.style.bottom = '10px';
+      scrollToTop.style.bottom = "15px";
     }
   });
+}
 
+function footerYear() {
   document.getElementById("year").innerHTML = new Date().getFullYear();
+}
 
-  new bootstrap.Carousel(document.querySelector(".carousel"), {
-    interval: 4000,
-    keyboard: false,
-    touch: false,
-    hover: false,
-    ride: "carousel"
-  });
+(function () {
+  darkMode();
+  scrollToTop();
+  footerYear();
 })();
