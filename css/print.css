@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500');
 
 @page {
     size: A4;
@@ -7,6 +7,9 @@
     @top-center {
         content: element(PrintHeader);
     }
+
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
 }
 
 header .print-content {
@@ -20,6 +23,9 @@ html {
 }
 
 body {
+
+      -webkit-print-color-adjust:exact !important;
+  print-color-adjust:exact !important;
     font-family: 'Poppins', Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 400;
