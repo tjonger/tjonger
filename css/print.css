@@ -12,6 +12,12 @@
     print-color-adjust:exact !important;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
 header .print-content {
 	position: running(PrintHeader);
     text-align: center;
@@ -23,9 +29,6 @@ html {
 }
 
 body {
-
-      -webkit-print-color-adjust:exact !important;
-  print-color-adjust:exact !important;
     font-family: 'Poppins', Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -50,12 +53,9 @@ h2 {
     line-height: 30px;
 }
 
-.col-md-6 {
-    width: 100%;
-}
-
 .col-sm-6 {
     width: 50%;
+    float: left;
 }
 
 .scroll-to-top,
@@ -88,12 +88,12 @@ h2 {
     border-radius: 1000px;
     border: 8px solid #fff;
     overflow: hidden;
+    -webkit-print-color-adjust: exact !important;
+    -webkit-filter: blur(0) !important;
     -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,.1);
     -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,.1);
     box-shadow: 0px 0px 25px 0px rgba(0,0,0,.1);
     margin-bottom: 16px;
-    -webkit-print-color-adjust:exact;
-    -webkit-filter:opacity(1);
 }
 
 .home-photo .hp-inner {
@@ -124,6 +124,10 @@ h2 {
     padding: 0 10px 30px 0;
 }
 
+.info-block-w-icon {
+    box-sizing: border-box;
+}
+
 .info-block-w-icon .ci-icon {
     position: relative;
     display: table-cell;
@@ -140,7 +144,7 @@ h2 {
 .info-block-w-icon .ci-text {
     position: relative;
     display: table-cell;
-    padding: 0 0 0 15px;
+    padding: 0 16px 0 16px;
     vertical-align: middle;
 }
 
