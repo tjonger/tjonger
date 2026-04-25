@@ -1,45 +1,63 @@
 "use strict";
 
-function darkMode() {
-  document
-    .querySelector("#mode-switch")
-    .addEventListener("change", function () {
-      document.querySelector("#page").classList.toggle("dark-mode");
-    });
-}
-
-function scrollToTop() {
-  const scrollToTop = document.querySelector(".scroll-to-top");
-  scrollToTop.addEventListener("click", function () {
-    body.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
+(function () {
+  const page = document.querySelector("#page");
+  const modeSwitch = document.querySelector("#mode-switch");
+  const scrollToTopBtn = document.querySelector(".scroll-to-top");
   const body = document.querySelector("body");
   const pageContainer = document.querySelector(".page-container");
-  body.addEventListener("scroll", function () {
-    if (body.scrollTop > 150) {
-      scrollToTop.classList.remove("disabled");
-    } else {
-      scrollToTop.classList.add("disabled");
+  const footer = document.querySelector("footer");
+  const yearEl = document.getElementById("year");
+
+  // Dark mode
+  if (modeSwitch) {
+    // Restore saved preference or detect system preference
+    const saved = localStorage.getItem("dark-mode");
+    if (saved === "true" || (saved === null && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      page.classList.add("dark-mode");
+      modeSwitch.checked = true;
     }
 
-    if (body.scrollTop + window.innerHeight + 50 > pageContainer.offsetHeight) {
-      const footerHeight = document
-        .querySelector("footer")
-        .getClientRects()[0].height;
-      scrollToTop.style.bottom = `${Math.floor(footerHeight + 15)}px`;
-    } else {
-      scrollToTop.style.bottom = "15px";
-    }
-  });
-}
+    modeSwitch.addEventListener("change", () => {
+      page.classList.toggle("dark-mode");
+      localStorage.setItem("dark-mode", page.classList.contains("dark-mode"));
+    });
+  }
 
-function footerYear() {
-  document.getElementById("year").innerHTML = new Date().getFullYear();
-}
+  // Scroll to top
+  if (scrollToTopBtn && body && pageContainer) {
+    scrollToTopBtn.addEventListener("click", () => {
+      body.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
-(function () {
-  darkMode();
-  scrollToTop();
-  footerYear();
+
+
+    let ticking = false;
+    body.addEventListener("scroll", () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        if (body.scrollTop > 150) {
+          scrollToTopBtn.classList.remove("disabled");
+        } else {
+          scrollToTopBtn.classList.add("disabled");
+        }
+
+        if (footer && body.scrollTop + window.innerHeight + 50 > pageContainer.offsetHeight) {
+          const rects = footer.getClientRects();
+          if (rects.length > 0) {
+            scrollToTopBtn.style.bottom = `${Math.floor(rects[0].height + 15)}px`;
+          }
+        } else {
+          scrollToTopBtn.style.bottom = "15px";
+        }
+        ticking = false;
+      });
+    });
+  }
+
+  // Footer year
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 })();
