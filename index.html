@@ -26,8 +26,13 @@
     <meta property="og:type" content="profile"/>
     <meta property="og:image" content="https://danielhansen.nl/images/profile.png"/>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" media="screen">
+
     <link rel="stylesheet" href="css/main.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
 
@@ -50,27 +55,31 @@
         <header class="header">
             <div class="print-content">
                 <div class="home-photo">
-                    <img class="hp-inner" src="images/profile.png" alt="Hi!">
+                    <picture>
+                        <source srcset="images/profile.webp" type="image/webp">
+                        <img class="hp-inner" src="images/profile.png" alt="Hi!">
+                    </picture>
                 </div>
 
                 <h1>Daniël <span>Hansen</span></h1>
 
                 <div>
                     <p>
-                        <i aria-hidden="true" class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/dani%C3%ABl-hansen/" target="_blank" aria-label="LinkedIn">linkedin.com/in/daniël-hansen</a>
-                        <i aria-hidden="true" class="fab fa-github"></i> <a href="https://github.com/tjonger" target="_blank" aria-label="GitHub">github.com/tjonger</a>
+                        <i aria-hidden="true" class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/dani%C3%ABl-hansen/" target="_blank" rel="noopener" aria-label="LinkedIn">linkedin.com/in/daniël-hansen</a>
+                        <i aria-hidden="true" class="fab fa-github"></i> <a href="https://github.com/tjonger" target="_blank" rel="noopener" aria-label="GitHub">github.com/tjonger</a>
                         <i aria-hidden="true" class="fa fa-envelope"></i> <a href="mailto:hi@danielhansen.nl" aria-label="Email">hi@danielhansen.nl</a>
                     </p>
                     <p>
                         <a href="tel:+31629291913">
                             <i class="fa fa-phone" aria-hidden="true"></i> +31 6 29 29 19 13
                         </a>
-                        <a href="https://www.google.com/maps/place/Utrecht/" target="_blank">
+                        <a href="https://www.google.com/maps/place/Utrecht/" target="_blank" rel="noopener">
                             <i class="fa fa-location-arrow" aria-hidden="true"></i> Utrecht, The Netherlands
                         </a>
                     </p>
                 </div>
 
+            <!-- Duplicate of .home-text .intro below; this copy is used for print layout only -->
             <div class="intro">
 
                 <div class="block-title">
@@ -94,14 +103,14 @@
             </div>
             </div>
 
-            <div class="header-content clearfix">
+            <div class="header-content">
                 <div class="text-logo">
                     <a href="https://danielhansen.nl">
                         <div class="logo-symbol">DH</div>
                         <div class="logo-text">Daniël <span>Hansen</span></div>
                     </a>
                 </div>
-                <div class="mode-switch clearfix">
+                <div class="mode-switch">
                     <div class="mode-switch-system"></div>
 
                     <div class="form-check form-switch">
@@ -123,7 +132,10 @@
 
                                         <div class="col-sm-12 col-md-5 col-lg-5 print">
                                             <div class="home-photo">
-                                                <img class="hp-inner" src="images/profile.png" alt="Hi!">
+                                                <picture>
+                                                    <source srcset="images/profile.webp" type="image/webp">
+                                                    <img class="hp-inner" src="images/profile.png" alt="Hi!" loading="lazy">
+                                                </picture>
                                             </div>
                                         </div>
 
@@ -169,22 +181,22 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-12 col-md-6">
+                            <section class="col-12 col-md-6">
                                 <div class="p-40"></div>
 
                                 <div class="block-title">
                                     <h2>Experience</h2>
                                 </div>
 
-                                <div class="timeline clearfix">
-                                    <div class="timeline-item clearfix">
+                                <div class="timeline">
+                                    <div class="timeline-item">
                                         <h5 class="item-period">September 2023 - Present</h5>
                                         <span class="item-company">VodafoneZiggo, Utrecht</span>
                                         <h4 class="item-title">Frontend Developer at Priority.nl</h4>
                                         <p>As a Frontend Developer in the Priority team at VodafoneZiggo, I am tasked with developing and maintaining both frontend and backend applications, while also incorporating DevOps-related tasks to automate processes and streamline deployment & monitoring. Beside the normal every-day operations, I've been assigned the task of planning and orchestrating the migration process of multiple Java Spring Boot backends to NodeJS.</p>
                                     </div>
 
-                                    <div class="timeline-item clearfix">
+                                    <div class="timeline-item">
                                         <h5 class="item-period">January 2022 - March 2023</h5>
                                         <span class="item-company">Lightbase, Utrecht</span>
                                         <h4 class="item-title">Tech Lead</h4>
@@ -196,7 +208,7 @@
                                             during development phase.</p>
                                     </div>
 
-                                    <div class="timeline-item clearfix">
+                                    <div class="timeline-item">
                                         <h5 class="item-period">September 2019 - March 2023</h5>
                                         <span class="item-company">Lightbase, Utrecht</span>
                                         <h4 class="item-title">Backend Developer (NodeJS)</h4>
@@ -211,7 +223,7 @@
                                             Team Core, which is focused on standardization and documentation.</p>
                                     </div>
 
-                                    <div class="timeline-item clearfix">
+                                    <div class="timeline-item">
                                         <h5 class="item-period">November 2018 - October 2020</h5>
                                         <span class="item-company">Exit 0, Utrecht</span>
                                         <h4 class="item-title">Owner & Developer</h4>
@@ -220,7 +232,7 @@
                                             requirements of these companies.</p>
                                     </div>
 
-                                    <div class="timeline-item clearfix">
+                                    <div class="timeline-item">
                                         <h5 class="item-period">March 2018 - March 2019</h5>
                                         <span class="item-company">Enof creatieve communicatie, Utrecht</span>
                                         <h4 class="item-title">Full Stack Developer (PHP) & Lead</h4>
@@ -229,7 +241,7 @@
                                             tools used by the team.</p>
                                     </div>
 
-                                    <div class="timeline-item clearfix">
+                                    <div class="timeline-item">
                                         <h5 class="item-period">February 2017 - March 2018</h5>
                                         <span class="item-company">TransIP, Leiden</span>
                                         <h4 class="item-title">Chief Coder (PHP)</h4>
@@ -238,7 +250,7 @@
                                             the transip.nl website.</p>
                                     </div>
 
-                                    <div class="timeline-item clearfix">
+                                    <div class="timeline-item">
                                         <h5 class="item-period">March 2014 - February 2017</h5>
                                         <span class="item-company">Westsite Media, Utrecht</span>
                                         <h4 class="item-title">Full Stack Developer (PHP)</h4>
@@ -246,17 +258,17 @@
                                             client projects.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </section>
 
-                            <div class="col-12 col-md-6">
+                            <section class="col-12 col-md-6">
                                 <div class="p-40"></div>
 
                                 <div class="block-title">
                                     <h2>Education</h2>
                                 </div>
 
-                                <div class="timeline clearfix">
-                                    <div class="timeline-item clearfix">
+                                <div class="timeline">
+                                    <div class="timeline-item">
                                         <h5 class="item-period">February 2018 - August 2018</h5>
                                         <span class="item-company">University of Amsterdam</span>
                                         <h4 class="item-title">M.Sc. in Software Engineering (not finished)</h4>
@@ -267,7 +279,7 @@
                                             apply this in my daily job as a programmer.</p>
                                     </div>
 
-                                    <div class="timeline-item clearfix">
+                                    <div class="timeline-item">
                                         <h5 class="item-period">February 2016 - July 2016</h5>
                                         <span class="item-company">University of Amsterdam</span>
                                         <h4 class="item-title">Minor Programming</h4>
@@ -279,7 +291,7 @@
                                             silicon chip with many gates, but without the traces between them.</p>
                                     </div>
 
-                                    <div class="timeline-item clearfix">
+                                    <div class="timeline-item">
                                         <h5 class="item-period">September 2013 - June 2017</h5>
                                         <span class="item-company">University of Applied Sciences Amsterdam (HvA)</span>
                                         <h4 class="item-title">BASc in Software Engineering</h4>
@@ -287,19 +299,19 @@
                                             theory rather than just trial and error (self-taught).</p>
                                     </div>
 
-                                    <div class="timeline-item clearfix">
+                                    <div class="timeline-item">
                                         <h5 class="item-period">September 2008 - June 2013</h5>
                                         <span class="item-company">Leidsche Rijn College (LRC), Utrecht</span>
                                         <h4 class="item-title">Senior general secondary education (HAVO)</h4>
                                         <p>With as subject: Science and technology (<span lang="nl">Natuur &amp; Techniek</span>).</p>
                                     </div>
                                 </div>
-                            </div>
+                            </section>
                         </div>
 
                         <div class="page-new"></div>
 
-                        <div class="row">
+                        <section class="row">
                             <div class="col-12 col-sm-12">
                                 <div class="p-40"></div>
 
@@ -307,7 +319,7 @@
                                     <h2>Passions</h2>
                                 </div>
                             </div>
-                        </div>
+                        </section>
 
                         <div class="row">
                             <div class="col-12 col-sm-6">
@@ -389,7 +401,7 @@
                             </div>
                         </div>
 
-                        <div class="row skills">
+                        <section class="row skills">
                             <div class="col-12 col-sm-12">
                                 <div class="p-40"></div>
 
@@ -397,7 +409,7 @@
                                     <h2>Skills</h2>
                                 </div>
 
-                                <ul class="list-items">
+                                <ul class="list-items" role="list">
                                     <li>C</li>
                                     <li>PHP</li>
                                     <li>Java</li>
@@ -415,23 +427,23 @@
                                     <li>Scrum</li>
                                 </ul>
                             </div>
-                        </div>
+                        </section>
 
                     </div>
                 </div>
             </div>
         </div>
 
-        <footer class="site-footer clearfix">
+        <footer class="site-footer">
             <div class="footer-social">
                 <ul class="footer-social-links">
                     <li>
-                        <a href="https://www.linkedin.com/in/dani%C3%ABl-hansen/" target="_blank">
+                        <a href="https://www.linkedin.com/in/dani%C3%ABl-hansen/" target="_blank" rel="noopener">
                             <i class="fab fa-linkedin"></i> Linkedin
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/tjonger" target="_blank"><i class="fab fa-github"></i> Github</a>
+                        <a href="https://github.com/tjonger" target="_blank" rel="noopener"><i class="fab fa-github"></i> Github</a>
                     </li>
                     <li>
                         <a href="tel:+31629291913"><i class="fa fa-phone"></i> +31 6 29 29 19 13</a>
@@ -440,7 +452,7 @@
                         <a href="mailto:hi@danielhansen.nl"><i class="fa fa-envelope"></i> hi@danielhansen.nl</a>
                     </li>
                     <li>
-                        <a href="https://www.google.com/maps/place/Utrecht/" target="_blank">
+                        <a href="https://www.google.com/maps/place/Utrecht/" target="_blank" rel="noopener">
                             <i class="fa fa-location-arrow"></i> Utrecht, The Netherlands
                         </a>
                     </li>
@@ -454,7 +466,7 @@
 
     </div>
 
-    <script src="https://kit.fontawesome.com/d8f0811e54.js" crossorigin="anonymous" async></script>
+    <script src="https://kit.fontawesome.com/d8f0811e54.js" crossorigin="anonymous" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
             crossorigin="anonymous"></script>

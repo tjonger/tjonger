@@ -22,6 +22,13 @@
       page.classList.toggle("dark-mode");
       localStorage.setItem("dark-mode", page.classList.contains("dark-mode"));
     });
+
+    // Listen for OS theme changes when no manual preference is saved
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+      if (localStorage.getItem("dark-mode") !== null) return;
+      page.classList.toggle("dark-mode", e.matches);
+      modeSwitch.checked = e.matches;
+    });
   }
 
   // Scroll to top
@@ -29,8 +36,6 @@
     scrollToTopBtn.addEventListener("click", () => {
       body.scrollTo({ top: 0, behavior: "smooth" });
     });
-
-
 
     let ticking = false;
     body.addEventListener("scroll", () => {

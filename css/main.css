@@ -8,12 +8,25 @@
   --color-brand: #54CA95;
   --color-brand-hover: #FF9800;
   --color-text: #666;
+  --color-text-muted: #aaa;
   --color-heading: #333;
   --color-bg: #54CA95;
   --color-surface: #fff;
   --color-surface-alt: #fdfdfd;
+  --color-surface-elevated: #444;
   --color-border: #f2f2f2;
   --color-timeline-line: #f5f6f9;
+  --color-logo-text: #222;
+  --color-footer-link: #333;
+  --color-footer-text: #333;
+  --color-scroll-btn-bg: #fafafa;
+  --color-scroll-btn-border: #e5e5e5;
+  --color-scroll-btn-text: #333;
+  --color-photo-border: #fff;
+  --color-photo-bg: #fff;
+  --color-photo-shadow: rgba(0,0,0,.1);
+  --color-scrollbar-track: #fff;
+  --color-scrollbar-thumb: #d5d5d5;
   --font-family: 'Poppins', Helvetica, sans-serif;
 }
 
@@ -26,7 +39,7 @@ html {
   height: 100%;
   min-height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: hidden; /* Prevents double scrollbar; body handles scrolling */
 }
 
 body {
@@ -120,15 +133,15 @@ ul ul {
   z-index: 100;
   display: inline-block;
   padding: 0;
-  background-color: #fafafa;
+  background-color: var(--color-scroll-btn-bg);
   height: 50px;
   width: 50px;
   text-align: center;
   line-height: 50px;
   font-size: 24px;
   cursor: pointer;
-  border: 1px solid #e5e5e5;
-  color: #333;
+  border: 1px solid var(--color-scroll-btn-border);
+  color: var(--color-scroll-btn-text);
   opacity: 1;
   border-radius: 8px;
   visibility: visible;
@@ -202,6 +215,9 @@ ul ul {
 
 .header-content {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .print-content {
@@ -213,14 +229,13 @@ ul ul {
    ========================================================================== */
 
 .text-logo {
-  float: left;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
 }
 
 .text-logo a {
-  display: block;
+  display: flex;
+  align-items: center;
   outline: 0;
 }
 
@@ -229,7 +244,7 @@ ul ul {
 }
 
 .logo-symbol {
-  float: left;
+  flex-shrink: 0;
   width: 44px;
   height: 44px;
   line-height: 44px;
@@ -244,10 +259,9 @@ ul ul {
 }
 
 .logo-text {
-  float: left;
   line-height: 50px;
   font-size: 20px;
-  color: #222;
+  color: var(--color-logo-text);
   font-weight: 600;
 }
 
@@ -260,15 +274,11 @@ ul ul {
    ========================================================================== */
 
 .mode-switch {
-  float: right;
-}
-
-.mode-switch .mode-switch-system {
-  float: left;
+  display: flex;
+  align-items: center;
 }
 
 .mode-switch .form-switch {
-  float: right;
   height: 2.5rem;
 }
 
@@ -281,8 +291,9 @@ ul ul {
 }
 
 .mode-switch .form-switch .form-check-input:before {
-  content: "\263C";
-  font-size: 29px;
+  font-family: "Font Awesome 6 Free";
+  content: "\f185";
+  font-size: 1rem;
   color: var(--color-brand);
   display: inline-block;
   position: absolute;
@@ -298,11 +309,11 @@ ul ul {
 }
 
 .mode-switch .form-switch .form-check-input:checked:before {
-  margin-left: 45px;
-  font-size: 18px;
-  color: #fff;
   font-family: "Font Awesome 6 Free";
   content: "\f186";
+  margin-left: 45px;
+  font-size: 1rem;
+  color: #fff;
 }
 
 .mode-switch .form-switch .form-check-input:focus {
@@ -407,7 +418,7 @@ ul ul {
 
 .home-text h4 {
   font-size: 16px;
-  color: #aaa;
+  color: var(--color-text-muted);
   font-weight: 300;
   margin-bottom: 10px;
 }
@@ -420,11 +431,11 @@ ul ul {
   display: block;
   position: relative;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--color-photo-bg);
   border-radius: 1000px;
-  border: 18px solid #fff;
+  border: 18px solid var(--color-photo-border);
   overflow: hidden;
-  box-shadow: 0 0 25px 0 rgba(0,0,0,.1);
+  box-shadow: 0 0 25px 0 var(--color-photo-shadow);
 }
 
 .home-photo .hp-inner {
@@ -628,7 +639,7 @@ ul ul {
 }
 
 .site-footer .footer-social-links li a {
-  color: #333;
+  color: var(--color-footer-link);
   text-decoration: none;
   line-height: 21px;
   font-size: 13px;
@@ -697,13 +708,13 @@ ul ul {
   body::-webkit-scrollbar-track,
   .single-page-content::-webkit-scrollbar-track,
   .header::-webkit-scrollbar-track {
-    background-color: #fff;
+    background-color: var(--color-scrollbar-track);
   }
 
   body::-webkit-scrollbar-thumb,
   .single-page-content::-webkit-scrollbar-thumb,
   .header::-webkit-scrollbar-thumb {
-    background-color: #d5d5d5;
+    background-color: var(--color-scrollbar-thumb);
   }
 
   .page-container {
@@ -750,13 +761,13 @@ ul ul {
     left: 0;
     z-index: 999;
     padding: 0;
+    background-color: var(--color-surface);
     box-shadow: 0 0 10px 0 rgba(0,0,0,.08);
   }
 
   .header-content {
     position: relative;
     z-index: 999;
-    background-color: var(--color-surface);
     padding: 10px 20px;
   }
 
@@ -842,86 +853,29 @@ ul ul {
    Dark Mode
    ========================================================================== */
 
-.dark-mode .page-container {
-  background-color: #222;
-}
-
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode h3,
-.dark-mode h4,
-.dark-mode h5,
-.dark-mode h6 {
-  color: #f5f5f5;
-}
-
-.dark-mode p {
-  color: #d5d5d5;
-}
-
-.dark-mode .scroll-to-top {
-  background-color: #333;
-  border: 1px solid #222;
-  color: #aaa;
-  box-shadow: 0 0 12px 0 rgba(0,0,0,.12);
-}
-
-@media only screen and (max-width: 991px) {
-  .dark-mode .header-content {
-    background-color: #222;
-  }
-}
-
-.dark-mode .logo-text {
-  color: #fff;
-}
-
-.dark-mode .home-photo {
-  background-color: #444;
-  border: 18px solid #444;
-  box-shadow: 0 0 25px 0 rgba(0,0,0,.8);
+.dark-mode {
+  --color-text: #d5d5d5;
+  --color-text-muted: #aaa;
+  --color-heading: #f5f5f5;
+  --color-surface: #222;
+  --color-surface-alt: #252525;
+  --color-border: #333;
+  --color-timeline-line: #333;
+  --color-logo-text: #fff;
+  --color-footer-link: #ddd;
+  --color-footer-text: #ddd;
+  --color-scroll-btn-bg: #333;
+  --color-scroll-btn-border: #222;
+  --color-scroll-btn-text: #aaa;
+  --color-photo-border: #444;
+  --color-photo-bg: #444;
+  --color-photo-shadow: rgba(0,0,0,.8);
+  --color-scrollbar-track: #222;
+  --color-scrollbar-thumb: #444;
 }
 
 .dark-mode .home-photo .hp-inner {
   content: url('../images/profile_dark.png');
-}
-
-.dark-mode .block-title h2:before {
-  background-color: #353535;
-}
-
-.dark-mode .block-title h2:after {
-  background-color: var(--color-brand);
-}
-
-.dark-mode .timeline-item h5.item-period {
-  color: #d5d5d5;
-  background-color: #222;
-}
-
-.dark-mode .timeline-item .item-company {
-  color: #aaa;
-}
-
-.dark-mode .timeline-item:before {
-  background-color: #333;
-}
-
-.dark-mode .timeline-item:after {
-  background-color: #333;
-}
-
-.dark-mode .site-footer {
-  background-color: #252525;
-  border-top: 2px solid #333;
-}
-
-.dark-mode .site-footer .footer-social-links li a {
-  color: #ddd;
-}
-
-.dark-mode .footer-copyrights p {
-  color: #ddd;
 }
 
 .dark-mode .mode-switch .form-switch .form-check-input:checked {
