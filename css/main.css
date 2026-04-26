@@ -299,7 +299,7 @@ ul ul {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 10px;
+  margin-left: 11px;
   transition: margin-left .15s ease-in-out;
 }
 
@@ -311,12 +311,12 @@ ul ul {
 .mode-switch .form-switch .form-check-input:checked:before {
   font-family: "Font Awesome 6 Free";
   content: "\f186";
-  margin-left: 45px;
+  margin-left: 47px;
   font-size: 1rem;
   color: #fff;
 }
 
-.mode-switch .form-switch .form-check-input:focus {
+.mode-switch .form-switch .form-check-input:focus-visible {
   border-color: var(--color-brand);
   box-shadow: 0 0 0 0.25rem rgb(84 202 149 / 25%);
 }
