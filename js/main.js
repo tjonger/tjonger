@@ -8,6 +8,8 @@
   const pageContainer = document.querySelector(".page-container");
   const footer = document.querySelector("footer");
   const yearEl = document.getElementById("year");
+  const printBtn = document.querySelector(".print-btn");
+  const printGenerated = document.querySelector(".print-generated");
 
   // Dark mode
   if (modeSwitch) {
@@ -64,5 +66,16 @@
   // Footer year
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
+  }
+
+  // Print / Download button
+  if (printBtn) {
+    printBtn.addEventListener("click", () => {
+      if (printGenerated) {
+        const now = new Date();
+        printGenerated.textContent = `Generated on ${now.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })} at ${now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}`;
+      }
+      window.print();
+    });
   }
 })();

@@ -1,25 +1,16 @@
 @page {
     size: A4;
     margin: 0;
-
-    @top-center {
-        content: element(PrintHeader);
-    }
-
-    -webkit-print-color-adjust:exact !important;
-    print-color-adjust:exact !important;
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
+/* ==========================================================================
+   Base
+   ========================================================================== */
 
-header .print-content {
-	position: running(PrintHeader);
-    text-align: center;
-    color: #000;
+* {
+    box-sizing: border-box;
 }
 
 html {
@@ -28,176 +19,324 @@ html {
 
 body {
     font-family: 'Poppins', Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 1.3;
-    color: #000;
-    width: 8.25in;
-    margin: 0 0 0 0;
+    line-height: 1.4;
+    color: #333;
+    margin: 0;
+    padding: 12mm 12mm;
+    width: 100%;
 }
 
 a {
-    page-break-inside: avoid;
-    color: #000;
+    color: #333;
     text-decoration: none;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 4px;
 }
 
 h2 {
     color: #54CA95;
-    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 0 8px;
+    line-height: 1.4;
+}
+
+h4 {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 4px 0 2px;
+}
+
+h5 {
+    font-size: 11px;
     font-weight: 500;
-    font-style: normal;
-    margin-bottom: 10px;
-    line-height: 30px;
+    margin: 0;
 }
 
-.col-sm-6 {
-    width: 47%;
-    float: left;
+p {
+    font-size: 11px;
+    line-height: 1.4;
+    margin: 0 0 4px;
+    color: #444;
 }
 
+/* ==========================================================================
+   Hide screen-only elements
+   ========================================================================== */
+
+.skip-links,
 .scroll-to-top,
 .header-content,
 .home-content,
 .site-footer,
-.skills {
-    display: none;
+.skills,
+.page-new,
+.print-btn {
+    display: none !important;
+}
+
+/* ==========================================================================
+   Page container
+   ========================================================================== */
+
+.page-container {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: #fff;
+}
+
+/* ==========================================================================
+   Print header (contact info)
+   ========================================================================== */
+
+header .print-content {
+    display: block !important;
+    text-align: center;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.print-content .home-photo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 8px;
+    border-radius: 1000px;
+    border: 4px solid #eee;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.print-content .home-photo .hp-inner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.print-content h1 {
+    margin-bottom: 4px;
+}
+
+.print-content h1 span {
+    font-weight: 400;
+}
+
+.print-content p {
+    font-size: 11px;
+    color: #555;
+    margin: 2px 0;
 }
 
 .print-content a {
-    margin: 0 8px 0 8px;
+    margin: 0 6px;
+    color: #555;
 }
+
+.print-content i {
+    color: #54CA95;
+    margin-right: 2px;
+}
+
+/* ==========================================================================
+   Intro / About me (print version)
+   ========================================================================== */
 
 .print-content .intro {
     text-align: left;
+    margin-top: 12px;
 }
 
-.page-container {
-    padding: 16px;
+.print-content .intro p {
+    font-size: 11px;
+    line-height: 1.5;
 }
 
-.home-photo {
-    display: block;
-    position: relative;
-    height: 150px;
-    width: 150px;
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 1000px;
-    border: 8px solid #fff;
-    overflow: hidden;
-    -webkit-print-color-adjust: exact !important;
-    -webkit-filter: blur(0) !important;
-    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,.1);
-    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,.1);
-    box-shadow: 0px 0px 25px 0px rgba(0,0,0,.1);
-    margin-bottom: 16px;
-}
+/* ==========================================================================
+   Block titles
+   ========================================================================== */
 
-.home-photo .hp-inner {
-    height: auto;
-    display: block;
-    width: 100%;
+.block-title {
+    margin-bottom: 6px;
 }
 
 .block-title h2 {
-    color: #000;
-    font-size: 21px;
-    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #54CA95;
+    display: inline-block;
 }
 
 .block-title h2:after {
-    display: block;
-    content: " ";
-    border: 1px solid #54CA95;
+    display: none;
+}
+
+/* ==========================================================================
+   Layout columns
+   ========================================================================== */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-12 {
     width: 100%;
 }
 
-.info-block-w-icon {
-    position: relative;
-    text-align: left;
-    width: 100%;
-    display: table;
+.col-md-6,
+.col-sm-6 {
+    width: 50%;
+    padding: 0 8px;
+}
+
+/* ==========================================================================
+   Timeline
+   ========================================================================== */
+
+.timeline {
     margin: 0;
-    padding: 0 10px 30px 0;
-}
-
-.info-block-w-icon {
-    box-sizing: border-box;
-}
-
-.info-block-w-icon .ci-icon {
-    position: relative;
-    display: table-cell;
-    padding-top: 7px;
-}
-
-.info-block-w-icon .ci-icon i {
-    position: relative;
-    display: table-cell;
-    color: #54CA95;
-    font-size: 1rem;
-}
-
-.info-block-w-icon .ci-text {
-    position: relative;
-    display: table-cell;
-    padding: 0 16px 0 16px;
-    vertical-align: middle;
-}
-
-.info-block-w-icon .ci-text h4 {
-    margin: 7px 0;
-    font-size: 1rem;
-}
-
-.info-block-w-icon .ci-text p {
-    font-size: .92em;
+    padding: 0;
 }
 
 .timeline-item {
     position: relative;
-    padding: 1rem 1rem 1rem 2rem;
+    padding: 6px 0 6px 20px;
     break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 .timeline-item:before {
-    display:inline-block;
     content: "";
-    border: 2px solid #54CA95;
-    border-radius: 9px;
-    padding: 6px;
+    display: block;
     position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #54CA95;
+    border-radius: 50%;
     background-color: #fff;
     left: 0;
-    z-index: 9;
+    top: 10px;
+    z-index: 2;
 }
 
 .timeline-item:after {
-    display:inline-block;
     content: "";
-    border-left: 1px solid #eee;
+    display: block;
     position: absolute;
+    border-left: 1px solid #ddd;
     top: 0;
     bottom: 0;
-    left: 7.5px;
-    z-index: 3;
+    left: 3.5px;
+    z-index: 1;
+}
+
+.timeline-item:first-child:after {
+    top: 10px;
+}
+
+.timeline-item:last-child:after {
+    bottom: auto;
+    height: 10px;
 }
 
 .timeline-item .item-period {
-    font-size: 12px;
+    font-size: 10px;
+    color: #666;
     display: inline-block;
+    font-weight: 500;
 }
 
 .timeline-item .item-company {
-    font-size: 12px;
+    font-size: 10px;
+    color: #888;
     float: right;
 }
 
 .timeline-item .item-title {
-    font-size: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 2px 0;
+    color: #333;
 }
 
-.page-new {
-    break-before: page;
+.timeline-item p {
+    font-size: 10px;
+    line-height: 1.4;
+    color: #555;
+    margin: 2px 0 0;
+}
+
+/* ==========================================================================
+   Passions
+   ========================================================================== */
+
+.info-block-w-icon {
+    display: table;
+    width: 100%;
+    padding: 4px 8px 8px 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.info-block-w-icon .ci-icon {
+    display: table-cell;
+    width: 24px;
+    vertical-align: top;
+    padding-top: 4px;
+}
+
+.info-block-w-icon .ci-icon i {
+    color: #54CA95;
+    font-size: 14px;
+}
+
+.info-block-w-icon .ci-text {
+    display: table-cell;
+    padding-left: 8px;
+    vertical-align: top;
+}
+
+.info-block-w-icon .ci-text h4 {
+    font-size: 11px;
+    margin: 0 0 2px;
+}
+
+.info-block-w-icon .ci-text p {
+    font-size: 10px;
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+.p-40 {
+    padding-top: 16px;
+}
+
+/* Prevent orphaned headings */
+.block-title {
+    break-after: avoid;
+    page-break-after: avoid;
+}
+
+/* ==========================================================================
+   Generated timestamp (print only)
+   ========================================================================== */
+
+.print-generated {
+    display: block;
+    text-align: right;
+    font-size: 9px;
+    color: #999;
+    margin-bottom: 8px;
 }

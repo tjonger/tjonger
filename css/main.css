@@ -113,7 +113,7 @@ ul ul {
 }
 
 /* ==========================================================================
-   Utilities
+   Utilities - Skip links
    ========================================================================== */
 
 .skip-links {
@@ -268,6 +268,10 @@ ul ul {
   display: none;
 }
 
+.print-generated {
+  display: none;
+}
+
 /* ==========================================================================
    Components - Logo
    ========================================================================== */
@@ -308,6 +312,36 @@ ul ul {
 .logo-text span {
   font-weight: 400;
 }
+
+/* ==========================================================================
+   Components - Print / Download button
+   ========================================================================== */
+
+.print-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: color .2s ease-in-out;
+  margin-right: 8px;
+}
+
+.print-btn:hover {
+  color: var(--color-brand);
+}
+
+.print-btn:focus {
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 0.25rem rgb(84 202 149 / 25%);
+}
+
 
 /* ==========================================================================
    Components - Dark mode switch
@@ -356,6 +390,7 @@ ul ul {
   color: #fff;
 }
 
+.mode-switch .form-switch .form-check-input:focus,
 .mode-switch .form-switch .form-check-input:focus-visible {
   border-color: var(--color-brand);
   box-shadow: 0 0 0 0.25rem rgb(84 202 149 / 25%);

@@ -60,6 +60,8 @@
 
     <div class="page-container">
 
+        <p class="print-generated" aria-hidden="true"></p>
+
         <header class="header">
             <div class="print-content">
                 <div class="home-photo">
@@ -118,6 +120,10 @@
                     </a>
                 </div>
                 <div class="mode-switch">
+                    <button class="print-btn" aria-label="Download as PDF" title="Download as PDF">
+                        <i class="fa-solid fa-download" aria-hidden="true"></i>
+                    </button>
+
                     <div class="mode-switch-system"></div>
 
                     <div class="form-check form-switch">
@@ -127,11 +133,11 @@
             </div>
         </header>
 
-        <div class="site-main">
+        <main class="site-main">
             <div class="single-page-content">
                 <div class="content-area">
 
-                    <div class="page-content site-content single-post" id="content" role="main">
+                    <div class="page-content site-content single-post" id="content">
                         <div class="row">
                             <div class="col-12 col-sm-12">
                                 <div class="home-content">
@@ -440,10 +446,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
 
         <footer class="site-footer">
-            <div class="footer-social">
+            <nav class="footer-social" aria-label="Social links">
                 <ul class="footer-social-links">
                     <li>
                         <a href="https://www.linkedin.com/in/dani%C3%ABl-hansen/" target="_blank" rel="noopener">
@@ -465,7 +471,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
 
             <div class="footer-copyrights">
                 <p>© <span id="year">2026</span> All rights reserved. Daniël Hansen</p>
