@@ -1,6 +1,7 @@
 {
     "name": "Daniël Hansen",
     "short_name": "Daniël Hansen",
+    "description": "Software engineer based in Utrecht, The Netherlands",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -15,9 +16,12 @@
         {
             "src": "/android-chrome-512x512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ],
+    "id": "/",
+    "scope": "/",
     "theme_color": "#54CA95",
     "background_color": "#54CA95",
     "display": "standalone",

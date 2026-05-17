@@ -1,0 +1,51 @@
+body, .page {
+    height: 100%;
+}
+
+.site-main {
+    flex: 1;
+    display: flex;
+}
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-code {
+    font-size: 8rem;
+    font-weight: 500;
+    color: var(--color-brand);
+    line-height: 1;
+}
+
+.error-message {
+    font-size: 1.4rem;
+    color: var(--color-heading);
+}
+
+.error-description {
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    max-width: 400px;
+}
+
+.error-home {
+    display: inline-block;
+    padding: 0.6rem 1.8rem;
+    background: var(--color-brand);
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.error-home:hover {
+    opacity: 0.85;
+}

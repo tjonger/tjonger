@@ -1,0 +1,9 @@
+---
+layout: none
+permalink: .well-known/security.txt
+---
+
+Contact: mailto:security@danielhansen.nl
+Expires: 2027-01-01T00:00:00.000Z
+Preferred-Languages: en, nl
+Canonical: https://danielhansen.nl/.well-known/security.txt
